@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+             document.write("<h1>Chapter 6 to 9 </h1>")
+        // -----------MATHS EXPRESSION----------
+
+        // 1. Write a program to take a number in a variable, do the
+        // required arithmetic to display the following result in your
+        // browser:
+        document.write(" <h2>Result: <br> </h2>");
+
+        var num = 10;
+        document.write("The value of a is: " + num + " <br>");
+        document.write("...............................................<br><br>");
+
+        var a = 10;
+        var newnum = ++a;
+        document.write("The value of ++a is " + newnum + " <br>");
+        document.write("Now the value of a is: " + a + " <br><br><br>");
+
+        var a2 = 11;
+        var newNum = a2++;
+        document.write("The value of a++ is " + newNum + " <br>");
+        document.write("Now the value of a is: " + a2 + " <br><br><br>");
+
+        var newvalue = --a2;
+        document.write("The value of --a is: " + newvalue + " <br>")
+        document.write("Now the value of a is: " + a2 + " <br><br><br>")
+
+        newNum = a2--;
+        document.write("The value of a-- is " + newNum + " <br>");
+        document.write("Now the value of a is: " + a2 + " <br><br><br>");
+
+        // 2. What will be the output in variables a, b & result after
+        // execution of the following script:
+        document.write(" <h2>Result: <br> </h2>");
+        var a = 2, b = 1;
+
+        // --a
+        var numA = a;
+        document.write(--numA + "<br>"); 
+
+        // --a - --b
+        numA = a; 
+        var numB = b;
+        document.write((--numA - --numB) + "<br>"); // a becomes 1, b becomes 0, output is 1 (1 - 0)
+
+        // --a - --b + ++b
+        numA = a;
+        numB = b; 
+        document.write((--numA - --numB + ++numB) + "<br>"); // a becomes 1, b becomes 0, then increments to 1, output is 2 (1 - 0 + 1)
+
+        // --a - --b + ++b + b--
+        numA = a; 
+        numB = b; 
+        document.write((--numA - --numB + ++numB + numB--) + "<br>"); // a becomes 1, b becomes 0, then increments to 1, output is 3 (1 - 0 + 1 + 1)
+
+        // Calculate final result:
+        a = 2;
+        b = 1;
+        var result = --a - --b + ++b + b--;
+        document.write("Final result is: " + result + "<br>"); 
+
+        // 3. Write a program that takes input a name from user & greet the user.
+        document.write("<h2> Greeting The User: </h2>");
+        var userName = prompt("Enter your name:");
+        document.write("Hello " + userName + ", Welcome to our website <br>");
+
+        // 5. Write a program to take input a number from user &
+        // display its multiplication table on your browser. If user
+        // does not enter a new number, multiplication table of 5
+        // should be displayed by default.
+        document.write("<h2>Table</h2>");
+        var table = prompt("Enter a Number", "5");
+        document.write('<table border="1" cellspacing="0"><br>');
+        for (var i = 1; i <= 10; i++) {
+            document.write( + table + " x " + i + " = " + table * i + "<br>");
+        }
+        document.write('</table>');
+
+        // 6. Take
+        // a) Take three subjects name from user and store them in 3
+        // different variables.
+        // Step a: Input subjects names
+        var subject1 = prompt("Enter first subject name:");
+        var subject2 = prompt("Enter second subject name:");
+        var subject3 = prompt("Enter third subject name:");
+
+        // Step b: Total marks for each subject
+        const totalMarksPerSubject = 100;
+
+        // Step c: Input obtained marks for each subject
+        var obtainedMarksSubject1 = parseFloat(prompt("Enter obtained marks for subject 1"));
+        var obtainedMarksSubject2 = parseFloat(prompt("Enter obtained marks for subject 2"));
+        var obtainedMarksSubject3 = parseFloat(prompt("Enter obtained marks for subject 3"));
+
+        // Step e: Calculate total marks and percentage
+        var totalObtainedMarks = obtainedMarksSubject1 + obtainedMarksSubject2 + obtainedMarksSubject3;
+        var totalMarks = 3 * totalMarksPerSubject; // Since there are 3 subjects 
+        var percentage = (totalObtainedMarks / totalMarks) * 100;
+
+        // Step f: Display the result
+        document.write("<h2>Subject Marks Sheet</h2>");
+        document.write(`<p>Subjects: ${subject1}, ${subject2}, ${subject3}</p>`);
+        document.write(`<p>Total Marks: ${totalMarks}</p>`);
+        document.write(`<p>Obtained Marks: ${totalObtainedMarks}</p>`);
+        document.write(`<p>Percentage: ${percentage.toFixed(2)}%</p>`);
+    </script>
+</body>
+</html>
+
+
